@@ -8,6 +8,9 @@ import LostPassword from "../Social/LostPassword";
 import AllArtifacts from "../Pages/AllArtifacts/AllArtifacts";
 import Details from "../Pages/Details/Details";
 import AllLikedPage from "../Pages/LikedPage/AllLikedPage";
+import AddArtifacts from "../Pages/AddArtifacts/AddArtifacts";
+import MyArtifacts from "../Pages/MyArtifacts/MyArtifacts";
+import PrivateRoute from "./PrivateRoute";
 
 const routes = createBrowserRouter([
   {
@@ -34,6 +37,18 @@ const routes = createBrowserRouter([
       {
         path: "/likedArtifacts",
         element: <AllLikedPage />,
+      },
+      {
+        path: "/addArtifacts",
+        element: (
+          <PrivateRoute>
+            <AddArtifacts />
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/myArtifacts",
+        element: <MyArtifacts />,
       },
       {
         path: "/signIn",

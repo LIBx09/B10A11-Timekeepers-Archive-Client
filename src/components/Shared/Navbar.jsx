@@ -48,15 +48,15 @@ const Navbar = () => {
               className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
             >
               <li>
-                <Link to="/add-job" className="justify-between">
-                  ADD
+                <Link to="/addArtifacts" className="justify-between">
+                  Add Artifacts
                 </Link>
               </li>
               <li>
                 <Link to="/likedArtifacts">Liked</Link>
               </li>
               <li>
-                <Link to="/">---</Link>
+                <Link to="/myArtifacts">My Artifacts</Link>
               </li>
               <li>
                 <Link to="/">---</Link>
