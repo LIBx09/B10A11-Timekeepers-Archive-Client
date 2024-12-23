@@ -18,7 +18,7 @@ const Navbar = () => {
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/">All</Link>
+            <Link to="/allArtifacts">All Artifacts</Link>
           </li>
 
           {!user && (
@@ -53,7 +53,7 @@ const Navbar = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/">---</Link>
+                <Link to="/likedArtifacts">Liked</Link>
               </li>
               <li>
                 <Link to="/">---</Link>
