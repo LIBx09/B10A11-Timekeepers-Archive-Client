@@ -15,10 +15,7 @@ const AddArtifacts = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const formData = new FormData(e.target);
-
-    // Convert FormData entries to an object
     const data = Object.fromEntries(formData.entries());
-    // console.log("Form Data Object:", data);
     data.artifactType = artifactType;
     try {
       const res = await axiosSecure.post("/artifacts", data);
@@ -163,7 +160,7 @@ const AddArtifacts = () => {
               Present Location
             </label>
             <input
-              type=""
+              type="text"
               name="presentLocation"
               className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
               placeholder="Location"

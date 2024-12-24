@@ -11,6 +11,7 @@ import AllLikedPage from "../Pages/LikedPage/AllLikedPage";
 import AddArtifacts from "../Pages/AddArtifacts/AddArtifacts";
 import MyArtifacts from "../Pages/MyArtifacts/MyArtifacts";
 import PrivateRoute from "./PrivateRoute";
+import ArtifactUpdate from "../Pages/MyArtifacts/ArtifactUpdate";
 
 const routes = createBrowserRouter([
   {
@@ -30,13 +31,21 @@ const routes = createBrowserRouter([
       },
       {
         path: "/details/:id",
-        element: <Details />,
+        element: (
+          <PrivateRoute>
+            <Details />
+          </PrivateRoute>
+        ),
         loader: ({ params }) =>
           fetch(`${import.meta.env.VITE_URL}/artifacts/${params.id}`),
       },
       {
         path: "/likedArtifacts",
-        element: <AllLikedPage />,
+        element: (
+          <PrivateRoute>
+            <AllLikedPage />
+          </PrivateRoute>
+        ),
       },
       {
         path: "/addArtifacts",
@@ -48,8 +57,25 @@ const routes = createBrowserRouter([
       },
       {
         path: "/myArtifacts",
-        element: <MyArtifacts />,
+        element: (
+          <PrivateRoute>
+            <MyArtifacts />
+          </PrivateRoute>
+        ),
       },
+      {
+        path: "/update/:id",
+        element: (
+          <PrivateRoute>
+            <ArtifactUpdate />
+          </PrivateRoute>
+        ),
+        loader: ({ params }) =>
+          fetch(`${import.meta.env.VITE_URL}/artifacts/${params.id}`).then(
+            (res) => res.json()
+          ),
+      },
+      // /artifacts/added/:email
       {
         path: "/signIn",
         element: <SignIn />,
