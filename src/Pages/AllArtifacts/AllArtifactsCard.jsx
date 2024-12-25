@@ -8,21 +8,14 @@ export function AllArtifactsCard({ data }) {
   console.log(data);
 
   return (
-    <div className="relative group w-64 h-64 overflow-hidden rounded-xl shadow-xl">
-      {/* Artifact Image */}
-      <img
-        src={artifactImage}
-        alt={artifactName}
-        className="w-full h-full object-cover"
-      />
+    <div className="relative group h-64 overflow-hidden rounded-xl shadow-xl">
+      <img src={artifactImage} alt={artifactName} className="w-full h-full " />
 
-      {/* Dark overlay on hover */}
       <div className="absolute inset-0 bg-black bg-opacity-50 transition-opacity duration-500 opacity-0 group-hover:opacity-100"></div>
 
       {/* Reflective effect */}
-      <div className="reflective-effect group-hover:animate-glint"></div>
+      {/* <div className="reflective-effect group-hover:animate-glint"></div> */}
 
-      {/* Card Content */}
       <div className="absolute bottom-0 w-full p-4 bg-black bg-opacity-60 text-white transition-transform duration-500 translate-y-full group-hover:translate-y-0">
         <h2 className="text-lg font-bold">{artifactName}</h2>
         <p className="text-sm">{historicalContext}</p>
