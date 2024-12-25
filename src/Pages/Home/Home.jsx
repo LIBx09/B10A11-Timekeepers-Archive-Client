@@ -6,8 +6,8 @@ const Home = () => {
   const featuredArtifacts = useLoaderData();
   // console.log(featuredArtifacts);
   return (
-    <main className="w-10/12 mx-auto">
-      <section>
+    <main className="">
+      <section className="w-12/12 mx-auto">
         <Banner />
       </section>
       <section className="">

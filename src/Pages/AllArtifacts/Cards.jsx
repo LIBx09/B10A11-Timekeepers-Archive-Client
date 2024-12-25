@@ -1,4 +1,5 @@
 /* eslint-disable react/prop-types */
+import "./light_glint.css";
 import { Link } from "react-router-dom";
 const Cards = ({ data }) => {
   const { artifactName, artifactImage, historicalContext, likeCount } = data;
@@ -18,6 +19,15 @@ const Cards = ({ data }) => {
             </button>
           </div>
         </div>
+      </div>
+      <div className="relative group w-64 h-64 overflow-hidden">
+        <img
+          src={artifactImage}
+          alt="Example"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black bg-opacity-50 transition-opacity duration-500 opacity-0 group-hover:opacity-100"></div>
+        <div className="reflective-effect"></div>
       </div>
     </div>
   );
