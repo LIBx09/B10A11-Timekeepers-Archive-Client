@@ -1,0 +1,7 @@
+.swiper-slide-shadow-left,
+.swiper-slide-shadow-right {
+  display: none !important; /* Hide left/right shadows */
+}
+.mySwiper .swiper-wrapper {
+  box-shadow: none !important; /* Ensure no shadow on Swiper inner wrapper */
+}

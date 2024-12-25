@@ -100,7 +100,7 @@ const Banner = () => {
           </SwiperSlide>
         ))}
       </Swiper>
-      <div className="relative z-10">
+      <div className="relative z-10 mb-20">
         <Fade direction="up">
           <div className="-mt-20 ">
             <BannerHelper />
