@@ -53,7 +53,7 @@ const AllLikedPage = () => {
                       <img
                         src={artifact.artifactImage || "/placeholder.jpg"}
                         alt={artifact.artifactName || "Artifact"}
-                        className="object-cover rounded"
+                        className="object-cover rounded w-20 h-16"
                       />
                     </div>
                   </td>

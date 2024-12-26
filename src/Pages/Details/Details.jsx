@@ -59,12 +59,8 @@ const Details = () => {
 
   return (
     <div className="min-h-screen bg-gray-100 py-12 px-4">
-      <div className="max-w-md mx-auto bg-white shadow-lg rounded-lg overflow-hidden animate__animated animate__fadeIn">
-        <img
-          className="w-full h-64 object-cover"
-          src={artifactImage}
-          alt={artifactName}
-        />
+      <div className="max-w-2xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden animate__animated animate__fadeIn">
+        <img className="w-full h-64 " src={artifactImage} alt={artifactName} />
         <div className="p-6">
           <h2 className="text-2xl font-bold text-gray-800">{artifactName}</h2>
           <p className="text-sm text-gray-500 mb-2">Type: {artifactType}</p>
