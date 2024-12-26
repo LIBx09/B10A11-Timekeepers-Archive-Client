@@ -5,6 +5,7 @@ import AboutTimekeeper from "./AboutTimekeeper";
 import CaroselTwo from "./CaroselTwo";
 import FeatureCollection from "./FeatureCollection";
 import CarouselOne from "./CarouselOne";
+import UpComing from "./UpComing";
 
 const Home = () => {
   const featuredArtifacts = useLoaderData();
@@ -23,7 +24,10 @@ const Home = () => {
       <section className="">
         <FeaturedArt data={featuredArtifacts} />
       </section>
-      <section>
+      <section className="w-10/12 mx-auto my-10">
+        <UpComing />
+      </section>
+      <section className="w-10/12 mx-auto my-10">
         <FeatureCollection />
       </section>
       <section className="my-20">
