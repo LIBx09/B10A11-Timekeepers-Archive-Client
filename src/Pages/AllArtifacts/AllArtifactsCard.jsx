@@ -20,7 +20,9 @@ export function AllArtifactsCard({ data }) {
         <h2 className="text-lg font-bold">{artifactName}</h2>
         <p className="text-sm">{historicalContext}</p>
         <div className="flex justify-between items-center mt-4">
-          <p className="text-sm">Like Count: {likeCount}</p>
+          <p className="text-sm">
+            {likeCount ? `Likes: ${likeCount}` : "No likes yet"}
+          </p>
           <button className="btn  px-4 py-2 rounded  hover:bg-[#AAA081] text-sm font-semibold">
             <Link to={`/details/${data._id}`}>View Details</Link>
           </button>

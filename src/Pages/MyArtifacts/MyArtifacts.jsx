@@ -1,17 +1,16 @@
-/* eslint-disable no-unused-vars */
 import { useEffect, useState } from "react";
 import useAuth from "../../Hooks/useAuth";
 import useAxios from "../../Hooks/useAxios";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 import { toast } from "react-toastify";
+import MyArtiCards from "./MyArtiCards";
 
 const MyArtifacts = () => {
   const { user } = useAuth();
   const axiosSecure = useAxios();
   const [myArtifacts, setMyArtifacts] = useState([]);
   const [search, setSearch] = useState("");
-  console.log(myArtifacts);
 
   useEffect(() => {
     const fetchMyArtifacts = async () => {
@@ -46,7 +45,6 @@ const MyArtifacts = () => {
           const res = await axiosSecure.delete(`/artifacts/delete/${_id}`);
           if (res.status === 200) {
             Swal.fire("Deleted!", "Your artifact has been deleted.", "success");
-            // Optionally refresh the artifacts list
             setMyArtifacts((prev) =>
               prev.filter((artifact) => artifact._id !== _id)
             );
@@ -55,7 +53,7 @@ const MyArtifacts = () => {
           Swal.fire(
             "Error!",
             "Failed to delete the artifact. Please try again.",
-            "error"
+            error
           );
         }
       }
@@ -64,46 +62,34 @@ const MyArtifacts = () => {
 
   return (
     <div>
-      <h2>Hello My Artifacts : {myArtifacts?.length}</h2>
-      <div>
+      <h2 className="text-5xl font-bold mb-6 text-center ">My Artifacts</h2>
+
+      <div className="text-center">
         <form>
-          <h6 className="footer-title">Newsletter</h6>
-          <fieldset className="form-control w-80">
+          <h6 className="footer-title">Search Artifacts</h6>
+          <fieldset className="form-control mx-auto w-80">
             <label className="label">
-              <span className="label-text">Enter your email address</span>
+              <span className="label-text">
+                Search by Artifact Name or Context
+              </span>
             </label>
-            <div className="join">
-              <input
-                type="text"
-                onChange={(e) => setSearch(e.target.value)}
-                name="search"
-                placeholder="username@site.com"
-                className="input input-bordered join-item"
-              />
-              <button className="btn btn-primary join-item">Subscribe</button>
-            </div>
+            <input
+              type="text"
+              onChange={(e) => setSearch(e.target.value)}
+              name="search"
+              placeholder="Search artifacts..."
+              className="input input-bordered"
+            />
           </fieldset>
         </form>
       </div>
-      <div>
-        {myArtifacts.map((artifacts) => (
-          <div key={artifacts._id} className="card border w-96">
-            <div className="card-body">
-              <h2 className="card-title">{artifacts.artifactName}</h2>
-              <p>{artifacts.historicalContext}</p>
-              <div className="card-actions justify-end">
-                <button className="btn">
-                  <Link to={`/update/${artifacts._id}`}>Update</Link>
-                </button>
-                <button
-                  onClick={() => handleDelete(artifacts._id)}
-                  className="btn"
-                >
-                  Delete
-                </button>
-              </div>
-            </div>
-          </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+        {myArtifacts.map((artifact) => (
+          <MyArtiCards
+            key={artifact._id}
+            artifact={artifact}
+            onDelete={handleDelete}
+          ></MyArtiCards>
         ))}
       </div>
     </div>
