@@ -21,7 +21,7 @@ export function AllArtifactsCard({ data }) {
         <p className="text-sm">{historicalContext}</p>
         <div className="flex justify-between items-center mt-4">
           <p className="text-sm">Like Count: {likeCount}</p>
-          <button className="btn btn-primary px-4 py-2 rounded bg-blue-500 hover:bg-blue-600 text-sm font-semibold">
+          <button className="btn  px-4 py-2 rounded  hover:bg-[#AAA081] text-sm font-semibold">
             <Link to={`/details/${data._id}`}>View Details</Link>
           </button>
         </div>
