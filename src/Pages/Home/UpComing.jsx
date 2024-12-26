@@ -6,6 +6,12 @@ import up3 from "../../assets/img/upcoming2.jpg";
 const UpComing = () => {
   return (
     <div className="space-y-8 p-4">
+      <div className="text-center space-y-5">
+        <h4 className="text-[#B0A78A] font-bold">WHAT&apos;S GOING ON</h4>
+        <h2 className="text-[#252930] text-5xl font-bold">
+          Our Upcoming Event
+        </h2>
+      </div>
       {/* Card */}
       {[up1, up2, up3].map((image, index) => (
         <div
@@ -34,11 +40,11 @@ const UpComing = () => {
 
           {/* Content */}
           <div className="flex-1 text-center lg:text-left">
-            <h1 className="text-3xl lg:text-5xl font-bold">Box Office News!</h1>
+            <h1 className="text-3xl lg:text-5xl font-bold">
+              Weekend Drop-In Sessions
+            </h1>
             <p className="py-4 text-gray-700">
-              Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-              excepturi exercitationem quasi. In deleniti eaque aut repudiandae
-              et a id nisi.
+              Man face fruit divided seasons herb from herb moveth whose.
             </p>
           </div>
 

@@ -3,6 +3,9 @@ import featureCollec2 from "../../assets/img/fc2.jpg";
 const FeatureCollection = () => {
   return (
     <div>
+      <div>
+        <h2 className="text-7xl my-10 text-[#AAA081]">Feature Collection</h2>
+      </div>
       <div className="flex flex-col md:flex-row items-center">
         <div className="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
           <div className="relative group overflow-hidden rounded-tl-lg rounded-br-lg">
@@ -17,9 +20,9 @@ const FeatureCollection = () => {
             <div className="absolute top-0 left-[-150%] w-[150%] h-full bg-gradient-to-r from-transparent via-white/50 to-transparent transform skew-x-[-20deg] pointer-events-none transition-all duration-700 group-hover:left-[150%]"></div>
           </div>
         </div>
-        <div className="ml-28">
-          <h4>Collection</h4>
-          <h2>Featured Collection</h2>
+        <div className=" mt-10 md:ml-28">
+          <h4 className="text-2xl font-bold">Collection</h4>
+          <h2 className="text-3xl font-medium">Featured Collection</h2>
           <p>
             Welcome to the World’s Leading Museum of Modern Art. It includes
             works of art created during the period stretching.
