@@ -58,9 +58,6 @@ const Navbar = () => {
               <li>
                 <Link to="/myArtifacts">My Artifacts</Link>
               </li>
-              <li>
-                <Link to="/">---</Link>
-              </li>
               <li className="mt-2">
                 <button
                   onClick={getOut}
