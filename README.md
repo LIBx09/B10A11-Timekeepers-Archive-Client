@@ -7,7 +7,11 @@
 ---
 **A web application for tracking and exploring historical artifacts.**  
 
-![Timekeeper's Archive](Timekeeper%20s%20Archive.png)  
+Timekeeper's Archive is a web application designed for history enthusiasts and researchers to explore and preserve historical artifacts. Users can register, browse artifacts, add new entries, and manage their own collection of historical items. Each artifact includes detailed information such as its origin, historical significance, and visual representation.
+
+This platform not only allows users to discover ancient relics like the Rosetta Stone or Antikythera Mechanism but also encourages them to contribute their own findings. Users can like artifacts, track their contributions, and interact with a visually rich, user-friendly interface.
+
+The system ensures a secure and smooth experience with Firebase authentication, MongoDB database, and an Express.js backend, making artifact management effortless. Whether you are a historian, collector, or simply curious about history, Timekeeper's Archive is your gateway to the past! 🏛️✨
 
 
 
