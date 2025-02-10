@@ -1,29 +1,46 @@
 // import logo from "../assets/images/logo.png";
-
+import logo from "../../assets/img/Logo.png";
 import { Link } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
 const Navbar = () => {
   const { user, getOut } = useAuth();
   return (
-    <div className="navbar bg-base-100 shadow-sm container px-4 mx-auto">
+    <div className="navbar md:w-10/12 mx-auto">
       <div className="flex-1">
         <Link to="/" className="flex gap-2 items-center">
-          <img className="w-auto h-7" src="img" alt="" />
-          <span className="font-bold">Timekeeper&apos;s Archive</span>
+          <img className="w-auto h-7" src={logo} alt="" />
+          <span className="font-playfair font-black text-sm md:text-xl">
+            Timekeeper&apos;s Archive
+          </span>
         </Link>
       </div>
       <div className="flex-none">
-        <ul className="menu menu-horizontal px-1">
+        <ul className="menu menu-horizontal ">
           <li>
-            <Link to="/">Home</Link>
+            <Link
+              className="hover:text-[#AAA081] hover:bg-slate-800 hover:shadow-md transition-all duration-300 px-3 rounded-md"
+              to="/"
+            >
+              Home
+            </Link>
           </li>
           <li>
-            <Link to="/allArtifacts">All Artifacts</Link>
+            <Link
+              className="hover:text-[#AAA081] hover:bg-slate-800 hover:shadow-md transition-all duration-300 px-3 rounded-md"
+              to="/allArtifacts"
+            >
+              All Artifacts
+            </Link>
           </li>
 
           {!user && (
             <li>
-              <Link to="/signIn">Sign In</Link>
+              <Link
+                className="hover:text-[#AAA081] hover:bg-slate-800 hover:shadow-md transition-all duration-300 px-3 rounded-md"
+                to="/signIn"
+              >
+                Sign In
+              </Link>
             </li>
           )}
         </ul>
@@ -48,20 +65,33 @@ const Navbar = () => {
               className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
             >
               <li>
-                <Link to="/addArtifacts" className="justify-between">
+                <Link
+                  to="/addArtifacts"
+                  className="hover:text-[#AAA081] hover:bg-slate-800 hover:shadow-md transition-all duration-300 px-3 rounded-md"
+                >
                   Add Artifacts
                 </Link>
               </li>
               <li>
-                <Link to="/likedArtifacts">Liked</Link>
+                <Link
+                  className="hover:text-[#AAA081] hover:bg-slate-800 hover:shadow-md transition-all duration-300 px-3 rounded-md"
+                  to="/likedArtifacts"
+                >
+                  Liked
+                </Link>
               </li>
               <li>
-                <Link to="/myArtifacts">My Artifacts</Link>
+                <Link
+                  className="hover:text-[#AAA081] hover:bg-slate-800 hover:shadow-md transition-all duration-300 px-3 rounded-md"
+                  to="/myArtifacts"
+                >
+                  My Artifacts
+                </Link>
               </li>
               <li className="mt-2">
                 <button
                   onClick={getOut}
-                  className="bg-gray-200 block text-center"
+                  className="bg-gray-200 block text-center hover:text-[#a0905f] hover:bg-slate-800 hover:shadow-md transition-all duration-300 px-3 rounded-md"
                 >
                   Sign Out
                 </button>

@@ -9,7 +9,12 @@ export default {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        playfair: ["Playfair Display", "serif"],
+        merriweather: ["Merriweather", "serif"],
+      },
+    },
   },
   plugins: [require("daisyui"), require("flowbite/plugin")],
 };
