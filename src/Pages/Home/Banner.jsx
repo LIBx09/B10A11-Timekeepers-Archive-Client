@@ -87,7 +87,7 @@ const Banner = () => {
               }}
             >
               {/* Glass Overlay */}
-              <div className="absolute inset-0 bg-black bg-opacity-20 backdrop-blur-0"></div>
+              <div className="absolute z-10 inset-0 bg-black bg-opacity-20 backdrop-blur-0"></div>
 
               {/* Center Text */}
               <CenterText
