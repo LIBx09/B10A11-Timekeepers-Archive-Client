@@ -3,8 +3,8 @@ import { motion } from "framer-motion";
 
 const AboutTimekeeper = () => {
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div className=" ">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
+      <div>
         <div className="flex items-center gap-2">
           <div className="w-12 h-[2px] text-[#848484] bg-[#AAA081] my-5"></div>
           <h4>About Timekeeper&apos;s Archive</h4>
@@ -36,17 +36,20 @@ const AboutTimekeeper = () => {
         </div>
 
         {/* Middle Column - Floating Image */}
-        <motion.div
-          animate={{ y: [0, -10, 0] }} // Subtle floating effect
-          transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-          className="flex justify-center items-center"
-        >
-          <img
-            src={tiger}
-            alt="Tiger"
-            className="w-full max-w-sm md:max-w-md lg:max-w-lg rounded-lg"
-          />
-        </motion.div>
+        <div>
+          <motion.div
+            animate={{ y: [0, -10, 0] }} // Subtle floating effect
+            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+            className="flex justify-center items-center"
+          >
+            <img
+              src={tiger}
+              alt="Tiger"
+              className="w-full max-w-sm md:max-w-md lg:max-w-lg rounded-lg"
+            />
+          </motion.div>
+          <div className="h-28 w-1 bg-[#AAA081] mx-4"></div>
+        </div>
 
         {/* Right Column - Museum Highlights */}
         <div className="lg:col-span-1 flex flex-col justify-center">
@@ -66,7 +69,6 @@ const AboutTimekeeper = () => {
               <li>Artifacts and Antiquities</li>
               <li>Traditional Art</li>
               <li>Contemporary Design</li>
-              <li>Middle Eastern Art</li>
             </ul>
             <ul className="list-disc space-y-2 pl-5">
               <div className="w-12 h-[2px]  bg-[#AAA081] my-5"></div>
@@ -74,6 +76,7 @@ const AboutTimekeeper = () => {
               <li>20th Century Design</li>
               <li>Arts of Global Africa</li>
               <li>Gardens</li>
+              <li>Middle Eastern Art</li>
             </ul>
           </div>
         </div>

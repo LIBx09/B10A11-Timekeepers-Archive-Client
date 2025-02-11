@@ -102,7 +102,7 @@ const Banner = () => {
       </Swiper>
       <div className="relative z-10 mb-20">
         <Fade direction="up">
-          <div className="-mt-28 md:-mt-48 ">
+          <div className="-mt-28 md:-mt-40 ">
             <BannerHelper />
           </div>
         </Fade>

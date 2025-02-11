@@ -10,6 +10,7 @@ const MyArtifacts = () => {
   const { user } = useAuth();
   const axiosSecure = useAxios();
   const [myArtifacts, setMyArtifacts] = useState([]);
+  console.log(myArtifacts);
   const [search, setSearch] = useState("");
 
   useEffect(() => {

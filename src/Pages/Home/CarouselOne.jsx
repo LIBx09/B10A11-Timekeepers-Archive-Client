@@ -35,7 +35,7 @@ const CarouselOne = () => {
   ];
 
   return (
-    <section className="bg-gradient-to-br from-black via-black to-gray-400  text-white py-10 px-6 rounded-lg">
+    <section className="bg-gradient-to-br from-[#2c2e31] via-black to-gray-400  text-white py-10 px-6 rounded-lg">
       <div className="max-w-6xl mx-auto">
         <div className="flex  gap-3 items-center">
           <div className="w-12 h-[2px] bg-[#AAA081]"></div>
