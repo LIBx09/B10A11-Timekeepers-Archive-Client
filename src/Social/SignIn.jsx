@@ -75,8 +75,8 @@ const SignIn = () => {
                 required
               />
             </div>
-            <div className="flex items-start">
-              <div className="flex items-start">
+            <div className="flex justify-between items-center px-4">
+              <div className="btn btn-outline">
                 <GoogleSign />
               </div>
               <Link to={`/lost?email=${encodeURIComponent(email)}`}>
