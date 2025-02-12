@@ -6,6 +6,7 @@ import Swal from "sweetalert2";
 import { toast } from "react-toastify";
 import MyArtiCards from "./MyArtiCards";
 import mybg from "../../assets/img/mybg.png";
+import Loading from "../../components/Loading/Loading";
 
 const MyArtifacts = () => {
   const { user } = useAuth();
@@ -91,13 +92,17 @@ const MyArtifacts = () => {
         </form>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6 w-10/12 mx-auto">
-        {myArtifacts.map((artifact) => (
-          <MyArtiCards
-            key={artifact._id}
-            artifact={artifact}
-            onDelete={handleDelete}
-          ></MyArtiCards>
-        ))}
+        {myArtifacts.length < 0 ? (
+          myArtifacts.map((artifact) => (
+            <MyArtiCards
+              key={artifact._id}
+              artifact={artifact}
+              onDelete={handleDelete}
+            ></MyArtiCards>
+          ))
+        ) : (
+          <Loading />
+        )}
       </div>
     </div>
   );

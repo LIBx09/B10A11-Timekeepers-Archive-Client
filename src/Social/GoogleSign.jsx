@@ -1,14 +1,16 @@
 import { toast } from "react-toastify";
 import useAuth from "../Hooks/useAuth";
+import { useNavigate } from "react-router-dom";
 
 const GoogleSign = () => {
   const { googleSignIn } = useAuth();
+  const navigate = useNavigate();
 
   const handleGoogleSignIn = () => {
     googleSignIn()
       .then((res) => {
         console.log(res);
-        // navigate(location?.state ? location.state : "/");
+        navigate(location?.state ? location.state : "/");
         toast.success("Successfully logged in with Google!");
       })
       .catch((error) => {
