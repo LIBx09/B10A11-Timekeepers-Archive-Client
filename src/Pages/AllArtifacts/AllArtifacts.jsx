@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { AllArtifactsCard } from "./AllArtifactsCard";
 import { Fade } from "react-awesome-reveal";
 import { FaSortAlphaDown, FaSortAlphaUp, FaSpinner } from "react-icons/fa";
-import bg from "../../assets/img/bgg.png";
+import bg from "../../assets/img/allbg.png";
 
 const AllArtifacts = () => {
   const allData = useLoaderData();
@@ -39,7 +39,7 @@ const AllArtifacts = () => {
       {/* Page Heading */}
       <Fade direction="up">
         <div className="text-center py-12">
-          <h1 className="text-5xl font-bold text-black mb-4">
+          <h1 className="text-5xl font-bold text-[#AAA081] mb-4">
             Explore the World of Artifacts
           </h1>
           <p className="text-2xl text-gray-300">
@@ -55,8 +55,8 @@ const AllArtifacts = () => {
           onClick={() => handleSort("asc")}
           className={`px-4 py-2 flex items-center gap-2 rounded-lg text-white font-semibold transition ${
             sortOrder === "asc"
-              ? "bg-blue-600"
-              : "bg-gray-500 hover:bg-blue-500"
+              ? "bg-[#AAA081]"
+              : "bg-gray-500 hover:bg-[#AAA081]"
           }`}
         >
           <FaSortAlphaDown /> Ascending
@@ -65,8 +65,8 @@ const AllArtifacts = () => {
           onClick={() => handleSort("desc")}
           className={`px-4 py-2 flex items-center gap-2 rounded-lg text-white font-semibold transition ${
             sortOrder === "desc"
-              ? "bg-blue-600"
-              : "bg-gray-500 hover:bg-blue-500"
+              ? "bg-[#AAA081]"
+              : "bg-gray-500 hover:bg-[#AAA081]"
           }`}
         >
           <FaSortAlphaUp /> Descending
