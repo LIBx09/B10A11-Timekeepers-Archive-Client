@@ -25,11 +25,6 @@ const BannerHelper = () => {
             <p className="leading-snug text-center dark:text-gray-600">
               Sunday & Holidays: Closed
             </p>
-            <div className="flex justify-center">
-              <button className="border-2 border-slate-700 py-2 px-5">
-                All Hours
-              </button>
-            </div>
           </div>
         </div>
       </div>
@@ -54,11 +49,6 @@ const BannerHelper = () => {
             <p className="leading-snug text-center dark:text-gray-600">
               Street Cambridge, MA
             </p>
-            <div className="flex justify-center">
-              <button className="border-2 border-slate-700 py-2 px-5">
-                Get Here
-              </button>
-            </div>
           </div>
         </div>
       </div>
@@ -83,11 +73,6 @@ const BannerHelper = () => {
             <p className="leading-snug text-center dark:text-gray-600">
               Street Cambridge, MA
             </p>
-            <div className="flex justify-center">
-              <button className="border-2 border-slate-700 py-2 px-5">
-                Buy Online
-              </button>
-            </div>
           </div>
         </div>
       </div>
