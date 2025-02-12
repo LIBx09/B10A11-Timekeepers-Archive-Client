@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { FaRegHeart, FaEye } from "react-icons/fa";
+import Loading from "../../components/Loading/Loading";
 
 const AllLikedPage = () => {
   const axiosSecure = useAxios();
@@ -96,7 +97,7 @@ const AllLikedPage = () => {
         </div>
       ) : (
         <div className="text-center mt-12" data-aos="fade-up">
-          <span className="loading loading-dots loading-lg"></span>
+          <Loading />
         </div>
       )}
     </div>
