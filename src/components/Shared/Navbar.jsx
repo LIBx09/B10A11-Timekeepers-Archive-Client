@@ -2,6 +2,7 @@
 import logo from "../../assets/img/Logo.png";
 import { Link } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
+import DarkModeToggle from "../DarkModeToggle/DarkModeToggle";
 const Navbar = () => {
   const { user, getOut } = useAuth();
   return (
@@ -89,6 +90,7 @@ const Navbar = () => {
                 </Link>
               </li>
               <li className="mt-2">
+                <DarkModeToggle />
                 <button
                   onClick={getOut}
                   className="bg-gray-200 block text-center hover:text-[#a0905f] hover:bg-slate-800 hover:shadow-md transition-all duration-300 px-3 rounded-md"

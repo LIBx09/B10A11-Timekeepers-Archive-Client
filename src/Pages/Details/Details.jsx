@@ -1,18 +1,31 @@
 import { useLoaderData } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import useAuth from "../../Hooks/useAuth";
+import {
+  FaHeart,
+  FaRegHeart,
+  FaMapMarkerAlt,
+  FaUser,
+  FaClock,
+} from "react-icons/fa";
+import { MdHistoryEdu } from "react-icons/md";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Details = () => {
-  const artifactDetails = useLoaderData(); // Load artifact details from the route
-  const [artifact, setArtifact] = useState(artifactDetails); // State for artifact details
+  const artifactDetails = useLoaderData();
+  const [artifact, setArtifact] = useState(artifactDetails);
   const { user } = useAuth();
 
-  // Destructure properties from artifact
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
+
   const {
     _id,
     artifactName,
     artifactImage,
-    artifactType,
+
     historicalContext,
     createdAt,
     discoveredAt,
@@ -25,8 +38,6 @@ const Details = () => {
   } = artifact;
 
   const currentUserEmail = user?.email;
-
-  // Check if the current user has liked the artifact
   const hasLiked = likedBy.includes(currentUserEmail);
 
   const handleLikeUnlike = async (id, email) => {
@@ -46,7 +57,6 @@ const Details = () => {
 
       const data = await response.json();
 
-      // Update artifact state with the latest data
       setArtifact((prev) => ({
         ...prev,
         likeCount: data.likeCount,
@@ -58,51 +68,84 @@ const Details = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 py-12 px-4">
-      <div className="max-w-2xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden animate__animated animate__fadeIn">
-        <img className="w-full h-64 " src={artifactImage} alt={artifactName} />
-        <div className="p-6">
-          <h2 className="text-2xl font-bold text-gray-800">{artifactName}</h2>
-          <p className="text-sm text-gray-500 mb-2">Type: {artifactType}</p>
-          <p className="text-gray-700">{historicalContext}</p>
-          <div className="mt-4">
-            <p>
-              <span className="font-bold">Created At:</span> {createdAt}
-            </p>
-            <p>
-              <span className="font-bold">Discovered At:</span> {discoveredAt}
-            </p>
-            <p>
-              <span className="font-bold">Discovered By:</span> {discoveredBy}
-            </p>
-            <p>
-              <span className="font-bold">Present Location:</span>{" "}
-              {presentLocation}
-            </p>
-          </div>
-          <div className="mt-4">
-            <p>
-              <span className="font-bold">Added By:</span> {adderName}
-            </p>
-            <p>
-              <span className="font-bold">Adder Email:</span> {adderEmail}
-            </p>
-          </div>
-          <div className="flex justify-between items-center mt-4">
-            <p className="text-sm text-gray-600">
-              <span className="font-bold">Likes:</span>{" "}
-              {likeCount || "No likes yet"}
-            </p>
-            <button
-              onClick={() => handleLikeUnlike(_id, currentUserEmail)}
-              className={`btn px-4 py-2 rounded ${
-                hasLiked
-                  ? "bg-red-500 hover:bg-red-600"
-                  : "bg-blue-500 hover:bg-blue-600"
-              } text-white`}
-            >
-              {hasLiked ? "Unlike" : "Like"}
-            </button>
+    <div className="min-h-screen w-10/12 mx-auto  py-12">
+      <div
+        className="max-w-7xl mx-auto bg-white shadow-2xl rounded-lg overflow-hidden"
+        data-aos="fade-up"
+      >
+        {/* Image Section */}
+        <div className="relative w-full h-[400px]">
+          <img
+            className="w-full  h-[400px] "
+            src={artifactImage}
+            alt={artifactName}
+          />
+          {/* <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white">
+              {artifactName}
+            </h1>
+          </div> */}
+        </div>
+
+        {/* Details Section */}
+        <div className="p-10">
+          <div className="grid md:grid-cols-2 gap-10">
+            {/* Left Section */}
+            <div>
+              <h2 className="text-3xl font-bold text-gray-800 flex items-center gap-2">
+                <MdHistoryEdu className="text-blue-500" /> {artifactName}
+              </h2>
+              <p className="text-lg text-gray-600 mt-2">{historicalContext}</p>
+
+              <div className="mt-5 space-y-3">
+                <p className="flex items-center gap-2 text-lg">
+                  <FaClock className="text-gray-500" />
+                  <span className="font-bold">Created At:</span> {createdAt}
+                </p>
+                <p className="flex items-center gap-2 text-lg">
+                  <FaClock className="text-gray-500" />
+                  <span className="font-bold">Discovered At:</span>{" "}
+                  {discoveredAt}
+                </p>
+                <p className="flex items-center gap-2 text-lg">
+                  <FaUser className="text-green-500" />
+                  <span className="font-bold">Discovered By:</span>{" "}
+                  {discoveredBy}
+                </p>
+                <p className="flex items-center gap-2 text-lg">
+                  <FaMapMarkerAlt className="text-red-500" />
+                  <span className="font-bold">Location:</span> {presentLocation}
+                </p>
+              </div>
+            </div>
+
+            {/* Right Section */}
+            <div className="bg-gray-100 p-6 rounded-lg">
+              <h3 className="text-2xl font-semibold text-gray-700">Added By</h3>
+              <p className="text-lg flex items-center gap-2 mt-2">
+                <FaUser className="text-blue-500" />
+                {adderName}
+              </p>
+              <p className="text-lg text-gray-600">{adderEmail}</p>
+
+              <div className="flex justify-between items-center mt-6">
+                <p className="text-lg text-gray-700">
+                  <span className="font-bold">Likes:</span>{" "}
+                  {likeCount || "No likes yet"}
+                </p>
+                <button
+                  onClick={() => handleLikeUnlike(_id, currentUserEmail)}
+                  className={`flex items-center gap-2 px-6 py-3 rounded-md transition duration-300 text-white font-semibold shadow-lg ${
+                    hasLiked
+                      ? "bg-red-500 hover:bg-red-600"
+                      : "bg-blue-500 hover:bg-blue-600"
+                  }`}
+                >
+                  {hasLiked ? <FaHeart /> : <FaRegHeart />}
+                  {hasLiked ? "Unlike" : "Like"}
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </div>

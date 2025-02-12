@@ -5,6 +5,7 @@ import useAxios from "../../Hooks/useAxios";
 import Swal from "sweetalert2";
 import { toast } from "react-toastify";
 import MyArtiCards from "./MyArtiCards";
+import mybg from "../../assets/img/mybg.png";
 
 const MyArtifacts = () => {
   const { user } = useAuth();
@@ -62,7 +63,12 @@ const MyArtifacts = () => {
   };
 
   return (
-    <div>
+    <div
+      className="min-h-screen bg-cover bg-center bg-no-repeat bg-fixed py-10"
+      style={{
+        backgroundImage: `url(${mybg})`,
+      }}
+    >
       <h2 className="text-5xl font-bold mb-6 text-center ">My Artifacts</h2>
 
       <div className="text-center">
@@ -84,7 +90,7 @@ const MyArtifacts = () => {
           </fieldset>
         </form>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6 w-10/12 mx-auto">
         {myArtifacts.map((artifact) => (
           <MyArtiCards
             key={artifact._id}

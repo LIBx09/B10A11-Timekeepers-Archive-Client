@@ -7,7 +7,9 @@ const AboutTimekeeper = () => {
       <div>
         <div className="flex items-center gap-2">
           <div className="w-12 h-[2px] text-[#848484] bg-[#AAA081] my-5"></div>
-          <h4>About Timekeeper&apos;s Archive</h4>
+          <h4 className="dark:text-gray-100 ">
+            About Timekeeper&apos;s Archive
+          </h4>
         </div>
         <h2 className=" text-[#aaa081] text-4xl md:text-5xl font-bold mb-10">
           The Art Gallery of San Francisco
@@ -16,7 +18,7 @@ const AboutTimekeeper = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {/* Left Column - Text Content */}
         <div className="md:col-span-2 lg:col-span-1 flex flex-col space-y-6">
-          <p className="text-[#000000] font-semibold text-lg md:text-xl leading-relaxed">
+          <p className="text-[#000000] dark:text-gray-100 font-semibold text-lg md:text-xl leading-relaxed">
             Welcome to the World’s Leading Museum of Modern Art. It includes
             works of art created during the period stretching from about 1860 to
             the 1970s.
@@ -53,7 +55,7 @@ const AboutTimekeeper = () => {
 
         {/* Right Column - Museum Highlights */}
         <div className="lg:col-span-1 flex flex-col justify-center">
-          <h2 className="text-[#252930] text-3xl md:text-4xl font-semibold">
+          <h2 className="text-[#252930] dark:text-[#AAA081] text-3xl md:text-4xl font-semibold">
             On View at Museum
           </h2>
           <p className="text-[#8C8C8C] text-lg font-medium mt-4 leading-relaxed">
@@ -62,7 +64,7 @@ const AboutTimekeeper = () => {
             click-throughs and nanotechnology immersion.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-[#252930] font-bold text-lg mt-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-[#252930] dark:text-[#8C8C8C] font-bold text-lg mt-6">
             <ul className="list-disc space-y-2 pl-5">
               <div className="w-12 h-[2px]  bg-[#AAA081] my-5"></div>
               <li>Western & Non-Western Cultures</li>

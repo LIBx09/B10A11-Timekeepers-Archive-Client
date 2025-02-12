@@ -15,7 +15,7 @@ const BannerHelper = () => {
           </div>
           <div className="space-y-2">
             <a rel="noopener noreferrer" href="#" className="block">
-              <h3 className="text-xl text-center font-semibold dark:text-violet-600">
+              <h3 className="text-xl text-center font-semibold dark:text-gray-600">
                 Open Hours
               </h3>
             </a>
@@ -33,7 +33,7 @@ const BannerHelper = () => {
           </div>
         </div>
       </div>
-      <div className=" p-4 shadow-2xl dark:bg-gray-50 dark:text-gray-800 bg-[#252930]">
+      <div className=" p-4 shadow-2xl dark:bg-gray-400 dark:text-gray-800 bg-[#252930]">
         <div className="space-y-4">
           <div className="space-y-2 flex justify-center p-5">
             <img
@@ -42,9 +42,9 @@ const BannerHelper = () => {
               className="block object-cover object-center w-20 h-20 rounded-full dark:bg-gray-500 border-2  shadow-2xl border-slate-700"
             />
           </div>
-          <div className="text-white space-y-2">
+          <div className="text-white space-y-2 ">
             <a rel="noopener noreferrer" href="#" className="block">
-              <h3 className="text-xl text-center font-semibold dark:text-violet-600">
+              <h3 className="text-xl text-center font-semibold  dark:text-white">
                 Find Location
               </h3>
             </a>
@@ -73,7 +73,7 @@ const BannerHelper = () => {
           </div>
           <div className="space-y-2">
             <a rel="noopener noreferrer" href="#" className="block">
-              <h3 className="text-xl text-center font-semibold dark:text-violet-600">
+              <h3 className="text-xl text-center font-semibold dark:text-gray-600">
                 Get Ticket
               </h3>
             </a>

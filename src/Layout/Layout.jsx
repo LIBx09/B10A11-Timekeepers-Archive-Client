@@ -4,7 +4,7 @@ import Footer from "../components/Shared/Footer";
 
 const Layout = () => {
   return (
-    <div className="font-merriweather">
+    <div className="font-merriweather ">
       <div className="bg-[#ffffff] rounded-bl-xl rounded-br-xl shadow-sm sticky top-0 z-20">
         <Navbar />
       </div>

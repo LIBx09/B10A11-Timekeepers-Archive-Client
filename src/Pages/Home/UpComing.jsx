@@ -8,7 +8,7 @@ const UpComing = () => {
     <div className="space-y-8 p-4">
       <div className="text-center space-y-5">
         <h4 className="text-[#B0A78A] font-bold">WHAT&apos;S GOING ON</h4>
-        <h2 className="text-[#252930] text-5xl font-bold">
+        <h2 className="text-[#252930] dark:text-slate-200 text-5xl font-bold">
           Our Upcoming Event
         </h2>
       </div>

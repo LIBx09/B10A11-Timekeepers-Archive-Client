@@ -28,10 +28,10 @@ const FeatureCollection = () => {
             <div className="w-12 h-[2px]  bg-[#AAA081] my-5"></div>
             <h4 className="text-2xl font-bold text-[#AAA081]">Collection</h4>
           </div>
-          <h2 className="text-5xl font-bold text-[#252930]">
+          <h2 className="text-5xl font-bold text-[#252930] dark:text-slate-200">
             Featured Collection
           </h2>
-          <p className="mt-5 text-lg font-medium">
+          <p className="mt-5 text-lg font-medium dark:text-[#848485]">
             Welcome to the World’s Leading Museum of Modern Art. It includes
             works of art created during the period stretching.
           </p>
@@ -48,7 +48,7 @@ const FeatureCollection = () => {
           <span className="text-[#AAA081]">- - - - - - - - - - - -</span>
           <br />
           <span className="text-[#AAA081]">- - - - - -</span>
-          <p>
+          <p className="dark:text-[#848485]">
             Man face fruit divided seasons herb from herb moveth whose. Dominion
             gathered winged morning, man won’t had fly beginning. Winged have
             saying behold.

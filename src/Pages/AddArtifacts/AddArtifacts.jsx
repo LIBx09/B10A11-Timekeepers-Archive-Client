@@ -147,7 +147,7 @@ const AddArtifacts = () => {
               className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#AAA081] focus:border-[#AAA081] block w-full p-2.5 dark:bg-[#AAA081] dark:border-[#AAA081] dark:placeholder-gray-400 dark:text-white dark:focus:ring-[#AAA081] dark:focus:border-[#AAA081]"
               defaultValue={user.email}
               placeholder="Please Enter Your Login Email"
-              //   disabled
+              readOnly
               required
             />
           </div>
@@ -162,6 +162,7 @@ const AddArtifacts = () => {
               name="adderName"
               className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#AAA081] focus:border-[#AAA081] block w-full p-2.5 dark:bg-[#AAA081] dark:border-[#AAA081] dark:placeholder-gray-400 dark:text-white dark:focus:ring-[#AAA081] dark:focus:border-[#AAA081]"
               defaultValue={user.displayName}
+              readOnly
               required
             />
           </div>
