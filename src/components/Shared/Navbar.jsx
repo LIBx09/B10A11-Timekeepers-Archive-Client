@@ -90,7 +90,9 @@ const Navbar = () => {
                 </Link>
               </li>
               <li className="mt-2">
-                <DarkModeToggle />
+                <div className="my-5">
+                  <DarkModeToggle />
+                </div>
                 <button
                   onClick={getOut}
                   className="bg-gray-200 block text-center hover:text-[#a0905f] hover:bg-slate-800 hover:shadow-md transition-all duration-300 px-3 rounded-md"

@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import useAuth from "../../Hooks/useAuth";
 import useAxios from "../../Hooks/useAxios";
-// import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 import { toast } from "react-toastify";
 import MyArtiCards from "./MyArtiCards";
@@ -12,12 +11,13 @@ const MyArtifacts = () => {
   const { user } = useAuth();
   const axiosSecure = useAxios();
   const [myArtifacts, setMyArtifacts] = useState([]);
-  console.log(myArtifacts);
   const [search, setSearch] = useState("");
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchMyArtifacts = async () => {
       try {
+        setLoading(true);
         const searchQuery = search ? `?search=${search}` : "";
         const res = await axiosSecure.get(
           `/artifacts/added/${user?.email}${searchQuery}`
@@ -25,6 +25,8 @@ const MyArtifacts = () => {
         setMyArtifacts(res.data);
       } catch (error) {
         toast.error("Failed to fetch added artifacts.", error);
+      } finally {
+        setLoading(false);
       }
     };
 
@@ -66,12 +68,11 @@ const MyArtifacts = () => {
   return (
     <div
       className="min-h-screen bg-cover bg-center bg-no-repeat bg-fixed py-10"
-      style={{
-        backgroundImage: `url(${mybg})`,
-      }}
+      style={{ backgroundImage: `url(${mybg})` }}
     >
-      <h2 className="text-5xl font-bold mb-6 text-center ">My Artifacts</h2>
+      <h2 className="text-5xl font-bold mb-6 text-center">My Artifacts</h2>
 
+      {/* Search Form */}
       <div className="text-center">
         <form>
           <h6 className="footer-title">Search Artifacts</h6>
@@ -91,17 +92,23 @@ const MyArtifacts = () => {
           </fieldset>
         </form>
       </div>
+
+      {/* Artifacts Display */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6 w-10/12 mx-auto">
-        {myArtifacts.length < 0 ? (
+        {loading ? (
+          <Loading />
+        ) : myArtifacts.length === 0 ? (
+          <p className="text-center col-span-3 text-white">
+            No artifacts found.
+          </p>
+        ) : (
           myArtifacts.map((artifact) => (
             <MyArtiCards
               key={artifact._id}
               artifact={artifact}
               onDelete={handleDelete}
-            ></MyArtiCards>
+            />
           ))
-        ) : (
-          <Loading />
         )}
       </div>
     </div>
