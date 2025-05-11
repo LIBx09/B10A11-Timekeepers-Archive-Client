@@ -8,6 +8,7 @@ import bg from "../../assets/img/allbg.png";
 const AllArtifacts = () => {
   const allData = useLoaderData();
   const [artifacts, setArtifacts] = useState([]);
+  const [search, setSearch] = useState("");
   console.log(artifacts.likeCount);
   const [sortOrder, setSortOrder] = useState("asc");
   const [loading, setLoading] = useState(true);
@@ -18,6 +19,16 @@ const AllArtifacts = () => {
       setLoading(false);
     }
   }, [allData]);
+
+  const handleSearch = (e) => {
+    const value = e.target.value.toLowerCase();
+    setSearch(value);
+
+    const filteredData = allData.filter((artifact) =>
+      artifact.artifactName.toLowerCase().includes(value)
+    );
+    setArtifacts(filteredData);
+  };
 
   const handleSort = (order) => {
     const sortedData = [...artifacts].sort((a, b) => {
@@ -50,6 +61,14 @@ const AllArtifacts = () => {
       </Fade>
 
       {/* Sorting & Loading Spinner */}
+      <div className="flex justify-center mb-6">
+        <input
+          type="text"
+          placeholder="Search artifacts..."
+          onChange={handleSearch}
+          className="input input-bordered w-full max-w-md"
+        />
+      </div>
       <div className="flex justify-center items-center gap-4 mb-8">
         <button
           onClick={() => handleSort("asc")}
