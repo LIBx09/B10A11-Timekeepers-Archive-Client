@@ -13,6 +13,7 @@ import MyArtifacts from "../Pages/MyArtifacts/MyArtifacts";
 import PrivateRoute from "./PrivateRoute";
 import ArtifactUpdate from "../Pages/MyArtifacts/ArtifactUpdate";
 import AboutArtifacts from "../Pages/AboutArtifacts.";
+import ContactUs from "../Pages/ContactUs";
 
 const routes = createBrowserRouter([
   {
@@ -33,6 +34,10 @@ const routes = createBrowserRouter([
       {
         path: "/about",
         element: <AboutArtifacts />,
+      },
+      {
+        path: "/contact",
+        element: <ContactUs />,
       },
       {
         path: "/details/:id",
