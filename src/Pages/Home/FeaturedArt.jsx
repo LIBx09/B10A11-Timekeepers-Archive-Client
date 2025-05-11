@@ -6,7 +6,7 @@ import Cards from "../AllArtifacts/Cards";
 const FeaturedArt = ({ data }) => {
   return (
     // <Fade direction="up">
-    <div className="w-10/12 mx-auto">
+    <div className="w-11/12 mx-auto">
       <div className="text-center space-y-5 my-10">
         <h4 className="text-[#B0A78A] font-bold">Timekeeper&apos;s Archive</h4>
         <h2 className="text-[#252930] dark:text-slate-200 text-5xl font-bold">

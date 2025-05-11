@@ -46,7 +46,7 @@ const slidesData = [
 ];
 
 const CenterText = ({ h3, h2, buttonText, buttonLink }) => (
-  <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white px-5">
+  <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-[#ffffff] px-5">
     <Fade direction="down">
       <h3 className="text-4xl font-bold mb-4">{h3}</h3>
     </Fade>
@@ -74,7 +74,7 @@ const Banner = () => {
         }}
         navigation={true}
         modules={[Autoplay, Pagination, Navigation]}
-        className="mySwiper"
+        className="mySwiper opacity-95"
       >
         {slidesData.map((slide, index) => (
           <SwiperSlide key={index}>

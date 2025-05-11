@@ -2,12 +2,13 @@ import { Link } from "react-router-dom";
 import up1 from "../../assets/img/upcoming.jpg";
 import up2 from "../../assets/img/upcoming1.jpg";
 import up3 from "../../assets/img/upcoming2.jpg";
+// import bg from "../../assets/img/ashBg.jpg";
 
 const UpComing = () => {
   return (
-    <div className="space-y-8 p-4">
+    <div className="space-y-8 w-11/12 mx-auto p-4 ">
       <div className="text-center space-y-5">
-        <h4 className="text-[#B0A78A] font-bold">WHAT&apos;S GOING ON</h4>
+        <h4 className="text-[#867b57] font-bold">WHAT&apos;S GOING ON</h4>
         <h2 className="text-[#252930] dark:text-slate-200 text-5xl font-bold">
           Our Upcoming Event
         </h2>

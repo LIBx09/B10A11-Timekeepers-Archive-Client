@@ -5,6 +5,12 @@ import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import { EffectCoverflow, Pagination } from "swiper/modules";
+import caro1 from "../../assets/img/caro1.jpg";
+import caro2 from "../../assets/img/caro2.jpg";
+import caro3 from "../../assets/img/caro3.jpg";
+import caro4 from "../../assets/img/caro4.jpg";
+import caro5 from "../../assets/img/caro5.jpg";
+
 // import { motion } from "framer-motion";
 
 // import required modules
@@ -13,35 +19,35 @@ import { EffectCoverflow, Pagination } from "swiper/modules";
 const CarouselOne = () => {
   const images = [
     {
-      src: "https://swiperjs.com/demos/images/nature-1.jpg",
+      src: caro1,
       title: "St. Catherine Alexandria in Prison",
     },
     {
-      src: "https://swiperjs.com/demos/images/nature-2.jpg",
+      src: caro2,
       title: "English Landscape Painting",
     },
     {
-      src: "https://swiperjs.com/demos/images/nature-3.jpg",
-      title: "Alexandria in Prison",
+      src: caro3,
+      title: "The Great Wave off Kanagawa",
     },
     {
-      src: "https://swiperjs.com/demos/images/nature-4.jpg",
+      src: caro4,
       title: "Modern Abstract Art",
     },
     {
-      src: "https://swiperjs.com/demos/images/nature-5.jpg",
+      src: caro5,
       title: "Historical Masterpiece",
     },
   ];
 
   return (
-    <section className="bg-gradient-to-br from-[#2c2e31] via-black to-gray-400  text-white py-10 px-6 rounded-lg">
+    <section className="bg-gradient-to-br from-[#2c2e31] via-black to-gray-400 h-[700px] text-white py-10 px-6">
       <div className="max-w-6xl mx-auto">
         <div className="flex  gap-3 items-center">
           <div className="w-12 h-[2px] bg-[#AAA081]"></div>
           <h2 className="text-xl text-[#AAA06D] uppercase ">Gallery</h2>
         </div>
-        <h1 className="text-4xl text-[#FFFFFF] font-bold mb-8">
+        <h1 className="text-4xl text-[#FFFFFF] font-bold mb-14 mt-4">
           Explore The Collection
         </h1>
         <Swiper
@@ -65,7 +71,7 @@ const CarouselOne = () => {
               <img
                 src={item.src}
                 alt={item.title}
-                className="rounded-lg shadow-lg object-cover w-full h-80"
+                className="rounded-lg shadow-lg object-cover w-full h-[470px]"
               />
               <p className="absolute bottom-4 left-4 text-lg font-semibold">
                 {item.title}

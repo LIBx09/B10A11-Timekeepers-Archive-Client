@@ -89,7 +89,7 @@ VITE_projectId=your_project_id_here
 VITE_storageBucket=your_storage_bucket_here
 VITE_messagingSenderId=your_messaging_sender_id_here
 VITE_appId=your_app_id_here
-VITE_URL=http://localhost:5000
+VITE_URL=https://timekeeper-s-archive-server.vercel.app/
 ```
 
 🚨 **Important:** Never expose API keys publicly!
@@ -127,7 +127,7 @@ CORS_CLIENT_URL=http://localhost:5173
 npm start
 ```
 
-This will start the server at `http://localhost:5000/`.
+This will start the server at `https://timekeeper-s-archive-server.vercel.app//`.
 
 ---
 

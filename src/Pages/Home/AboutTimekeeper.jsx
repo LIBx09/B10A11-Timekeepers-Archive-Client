@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const AboutTimekeeper = () => {
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
+    <div className="max-w-7xl mx-auto    mb-20">
       <div>
         <div className="flex items-center gap-2">
           <div className="w-12 h-[2px] text-[#848484] bg-[#AAA081] my-5"></div>

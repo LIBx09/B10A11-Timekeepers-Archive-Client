@@ -6,7 +6,7 @@ import DarkModeToggle from "../DarkModeToggle/DarkModeToggle";
 const Navbar = () => {
   const { user, getOut } = useAuth();
   return (
-    <div className="navbar md:w-10/12 mx-auto">
+    <div className="navbar md:w-11/12 mx-auto">
       <div className="flex-1">
         <Link to="/" className="flex gap-2 items-center">
           <img className="w-auto h-7" src={logo} alt="" />

@@ -3,7 +3,7 @@ import location from "../assets/img/location.gif";
 import ticket from "../assets/img/ticket.png";
 const BannerHelper = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 w-10/12 mx-auto mb-10">
+    <div className="grid grid-cols-1 md:grid-cols-3 w-11/12 mx-auto mb-10">
       <div className=" p-4 shadow-2xl dark:bg-gray-50 dark:text-gray-800 bg-[#FFFFFF]">
         <div className="space-y-4">
           <div className="space-y-2 flex justify-center p-5">
