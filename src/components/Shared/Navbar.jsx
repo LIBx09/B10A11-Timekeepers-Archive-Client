@@ -30,7 +30,15 @@ const Navbar = () => {
               className="hover:text-[#AAA081] hover:bg-slate-800 hover:shadow-md transition-all duration-300 px-3 rounded-md"
               to="/allArtifacts"
             >
-              All Artifacts
+              Artifacts
+            </Link>
+          </li>
+          <li>
+            <Link
+              className="hover:text-[#AAA081] hover:bg-slate-800 hover:shadow-md transition-all duration-300 px-3 rounded-md"
+              to="/about"
+            >
+              About
             </Link>
           </li>
 

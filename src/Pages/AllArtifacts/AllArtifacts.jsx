@@ -8,6 +8,7 @@ import bg from "../../assets/img/allbg.png";
 const AllArtifacts = () => {
   const allData = useLoaderData();
   const [artifacts, setArtifacts] = useState([]);
+  // eslint-disable-next-line no-unused-vars
   const [search, setSearch] = useState("");
   console.log(artifacts.likeCount);
   const [sortOrder, setSortOrder] = useState("asc");

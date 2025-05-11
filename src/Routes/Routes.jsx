@@ -12,6 +12,7 @@ import AddArtifacts from "../Pages/AddArtifacts/AddArtifacts";
 import MyArtifacts from "../Pages/MyArtifacts/MyArtifacts";
 import PrivateRoute from "./PrivateRoute";
 import ArtifactUpdate from "../Pages/MyArtifacts/ArtifactUpdate";
+import AboutArtifacts from "../Pages/AboutArtifacts.";
 
 const routes = createBrowserRouter([
   {
@@ -28,6 +29,10 @@ const routes = createBrowserRouter([
         path: "/allArtifacts",
         element: <AllArtifacts />,
         loader: () => fetch(`${import.meta.env.VITE_URL}/artifacts`),
+      },
+      {
+        path: "/about",
+        element: <AboutArtifacts />,
       },
       {
         path: "/details/:id",
