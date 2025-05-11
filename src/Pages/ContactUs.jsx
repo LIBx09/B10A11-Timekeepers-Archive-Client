@@ -1,7 +1,10 @@
 import { Fade } from "react-awesome-reveal";
 import { useForm } from "react-hook-form";
+import useAxios from "../Hooks/useAxios";
+import { toast } from "react-toastify";
 
 const ContactUs = () => {
+  const axiosSecure = useAxios();
   const {
     register,
     handleSubmit,
@@ -9,9 +12,19 @@ const ContactUs = () => {
     reset,
   } = useForm();
 
-  const onSubmit = (data) => {
-    console.log("Contact Form Data:", data);
-    reset(); // Reset form after successful submission
+  const onSubmit = async (data) => {
+    try {
+      const res = await axiosSecure.post("/contact", data);
+      if (res.data.insertedId) {
+        toast.success("Message sent successfully!");
+        reset(); // Reset form after successful submission
+      } else {
+        toast.error("Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      console.error("Contact submission failed:", error);
+      toast.error("Failed to send message. Please try again later.");
+    }
   };
 
   return (

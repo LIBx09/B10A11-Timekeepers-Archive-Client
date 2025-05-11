@@ -43,7 +43,7 @@ const AllArtifacts = () => {
 
   return (
     <div
-      className="min-h-screen bg-cover bg-center py-12"
+      className="min-h-screen bg-fixed bg-cover bg-center py-12"
       style={{
         backgroundImage: `url(${bg})`,
       }}

@@ -7,6 +7,7 @@ import FeatureCollection from "./FeatureCollection";
 import CarouselOne from "./CarouselOne";
 import UpComing from "./UpComing";
 import bg from "../../assets/img/ashBg.jpg";
+import Exhibits from "./Exhibits";
 
 const Home = () => {
   const featuredArtifacts = useLoaderData();
@@ -24,6 +25,9 @@ const Home = () => {
       </section>
       <section className="">
         <FeaturedArt data={featuredArtifacts} />
+      </section>
+      <section className=" w-11/12 mx-auto my-20">
+        <Exhibits />
       </section>
       <section
         className="my-10"
