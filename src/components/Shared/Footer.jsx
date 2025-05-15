@@ -27,47 +27,107 @@ const Footer = () => {
             <h2 className="mb-4 text-sm font-semibold text-gray-900 uppercase dark:text-white">
               Quick Links
             </h2>
-            <ul className="text-gray-600 dark:text-gray-400 space-y-2">
-              <li>
-                <Link
-                  to="/"
-                  className="hover:text-[#AAA081] hover:bg-slate-800 hover:shadow-md transition-all duration-300 px-3 rounded-md"
-                >
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/allArtifacts"
-                  className="hover:text-[#AAA081] hover:bg-slate-800 hover:shadow-md transition-all duration-300 px-3 rounded-md"
-                >
-                  All Artifacts
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/addArtifacts"
-                  className="hover:text-[#AAA081] hover:bg-slate-800 hover:shadow-md transition-all duration-300 px-3 rounded-md"
-                >
-                  Add Artifacts
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/likedArtifacts"
-                  className="hover:text-[#AAA081] hover:bg-slate-800 hover:shadow-md transition-all duration-300 px-3 rounded-md"
-                >
-                  Liked Artifacts
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/myArtifacts"
-                  className="hover:text-[#AAA081] hover:bg-slate-800 hover:shadow-md transition-all duration-300 px-3 rounded-md"
-                >
-                  My Artifacts
-                </Link>
-              </li>
+            <ul className=" text-gray-600 dark:text-gray-400 space-y-2">
+              <div className="col-span-1 ">
+                <li>
+                  <Link
+                    to="/"
+                    className="hover:underline transition-all duration-300 px-3 rounded-md"
+                  >
+                    Home
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/allArtifacts"
+                    className="hover:underline transition-all duration-300 px-3 rounded-md"
+                  >
+                    All Artifacts
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/addArtifacts"
+                    className="hover:underline transition-all duration-300 px-3 rounded-md"
+                  >
+                    Add Artifacts
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/likedArtifacts"
+                    className="hover:underline transition-all duration-300 px-3 rounded-md"
+                  >
+                    Liked Artifacts
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/myArtifacts"
+                    className="hover:underline transition-all duration-300 px-3 rounded-md"
+                  >
+                    My Artifacts
+                  </Link>
+                </li>
+              </div>
+            </ul>
+          </div>
+          <div>
+            <h2 className="mb-4 text-sm font-semibold text-gray-900 uppercase dark:text-white">
+              <hr />
+              <hr />
+              <hr />
+              <hr />
+              <hr />
+              <hr />
+              <hr />
+              <hr />
+              <hr />
+              <hr />
+            </h2>
+            <ul className="  text-gray-600 dark:text-gray-400 space-y-2">
+              <div className="col-span-1 ">
+                <li>
+                  <Link
+                    to="/maps"
+                    className="hover:underline transition-all duration-300 px-3 rounded-md"
+                  >
+                    Location
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/buy-ticket"
+                    className="hover:underline transition-all duration-300 px-3 rounded-md"
+                  >
+                    Get Ticket
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/all-hours"
+                    className="hover:underline transition-all duration-300 px-3 rounded-md"
+                  >
+                    Open Hours
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/about"
+                    className="hover:underline transition-all duration-300 px-3 rounded-md"
+                  >
+                    About
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/contact"
+                    className="hover:underline transition-all duration-300 px-3 rounded-md"
+                  >
+                    Contact
+                  </Link>
+                </li>
+              </div>
             </ul>
           </div>
 
@@ -85,7 +145,7 @@ const Footer = () => {
               <li>
                 <a
                   href="mailto:ibrahimfuad729@gmail.com"
-                  className="hover:text-[#AAA081] hover:bg-slate-800 hover:shadow-md transition-all duration-300 px-3 rounded-md text-blue-500"
+                  className="hover:underline transition-all duration-300 px-3 rounded-md text-blue-500"
                 >
                   ibrahimfuad729@gmail.com
                 </a>

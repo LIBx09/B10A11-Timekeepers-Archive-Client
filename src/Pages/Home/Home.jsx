@@ -17,6 +17,9 @@ const Home = () => {
       <section className="w-full">
         <Banner />
       </section>
+      <section className="my-20">
+        <CaroselTwo />
+      </section>
       <section className="w-11/12 mx-auto my-10">
         <AboutTimekeeper />
       </section>
@@ -29,6 +32,9 @@ const Home = () => {
       <section className=" w-11/12 mx-auto my-20">
         <Exhibits />
       </section>
+      <section className="w-11/12 mx-auto my-10">
+        <FeatureCollection />
+      </section>
       <section
         className="my-10"
         style={{
@@ -38,12 +44,6 @@ const Home = () => {
         }}
       >
         <UpComing />
-      </section>
-      <section className="w-11/12 mx-auto my-10">
-        <FeatureCollection />
-      </section>
-      <section className="my-20">
-        <CaroselTwo />
       </section>
     </main>
   );

@@ -14,6 +14,9 @@ import PrivateRoute from "./PrivateRoute";
 import ArtifactUpdate from "../Pages/MyArtifacts/ArtifactUpdate";
 import AboutArtifacts from "../Pages/AboutArtifacts.";
 import ContactUs from "../Pages/ContactUs";
+import OpenHours from "../components/OpenHours/OpenHours";
+import Maps from "../components/GettingLocaHere/Maps";
+import GetTicket from "../components/GetTicket/GetTicket";
 
 const routes = createBrowserRouter([
   {
@@ -62,6 +65,30 @@ const routes = createBrowserRouter([
         element: (
           <PrivateRoute>
             <AddArtifacts />
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/all-hours",
+        element: (
+          <PrivateRoute>
+            <OpenHours />
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/maps",
+        element: (
+          <PrivateRoute>
+            <Maps />
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/buy-ticket",
+        element: (
+          <PrivateRoute>
+            <GetTicket />
           </PrivateRoute>
         ),
       },

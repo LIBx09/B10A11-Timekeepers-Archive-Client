@@ -1,4 +1,5 @@
 import { Fade } from "react-awesome-reveal";
+import { Link } from "react-router-dom";
 
 const Exhibits = () => {
   return (
@@ -14,12 +15,16 @@ const Exhibits = () => {
             your ticket now!
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-6">
-            <button className="px-8 py-3 rounded-lg bg-[#AAA081] text-black font-semibold hover:bg-[#99906f] transition duration-200">
-              Explore Collection
-            </button>
-            <button className="px-8 py-3 rounded-lg border border-[#AAA081] text-[#AAA081] font-semibold hover:bg-[#AAA081] hover:text-black transition duration-200">
-              Buy Tickets
-            </button>
+            <Link to="/allArtifacts">
+              <button className="px-8 py-3 rounded-lg bg-[#AAA081] text-black font-semibold hover:bg-[#99906f] transition duration-200">
+                Explore Collection
+              </button>
+            </Link>
+            <Link to="/buy-ticket">
+              <button className="px-8 py-3 rounded-lg border border-[#AAA081] text-[#AAA081] font-semibold hover:bg-[#AAA081] hover:text-black transition duration-200">
+                Buy Tickets
+              </button>
+            </Link>
           </div>
         </Fade>
       </div>

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import clock from "../assets/img/clock.png";
 import location from "../assets/img/location.gif";
 import ticket from "../assets/img/ticket.png";
@@ -13,7 +14,7 @@ const BannerHelper = () => {
               className="block object-cover object-center w-20 h-20 p-3 rounded-full dark:bg-gray-500 border-2 bg-slate-300 shadow-2xl border-slate-700"
             />
           </div>
-          <div className="space-y-2">
+          <div className=" space-y-2">
             <a rel="noopener noreferrer" href="#" className="block">
               <h3 className="text-xl text-center font-semibold dark:text-gray-600">
                 Open Hours
@@ -25,6 +26,13 @@ const BannerHelper = () => {
             <p className="leading-snug text-center dark:text-gray-600">
               Sunday & Holidays: Closed
             </p>
+            <div className="flex justify-center">
+              <Link to="/all-hours">
+                <button className=" border-2 border-slate-200 hover:bg-[#252930] hover:text-white  py-2 px-4">
+                  All Hours
+                </button>
+              </Link>
+            </div>
           </div>
         </div>
       </div>
@@ -49,6 +57,13 @@ const BannerHelper = () => {
             <p className="leading-snug text-center dark:text-gray-600">
               Street Cambridge, MA
             </p>
+            <div className="flex justify-center">
+              <Link to="/maps">
+                <button className="hover:bg-white hover:text-[#252930] bg-[#AAA081] py-2 px-4">
+                  Getting Here
+                </button>
+              </Link>
+            </div>
           </div>
         </div>
       </div>
@@ -73,6 +88,13 @@ const BannerHelper = () => {
             <p className="leading-snug text-center dark:text-gray-600">
               Street Cambridge, MA
             </p>
+            <div className="flex justify-center">
+              <Link to="/buy-ticket">
+                <button className="hover:bg-[#252930] hover:text-white border-2 border-slate-200 py-2 px-4">
+                  Buy Ticket
+                </button>
+              </Link>
+            </div>
           </div>
         </div>
       </div>

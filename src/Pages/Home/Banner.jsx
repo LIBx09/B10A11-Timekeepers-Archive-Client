@@ -20,14 +20,14 @@ const slidesData = [
     h3: "TimeKeeper’s Archive Museum",
     h2: "Apply For Visa Immigration",
     buttonText: "Learn More",
-    buttonLink: "/visa",
+    buttonLink: "/about",
   },
   {
     image: ban2,
     h3: "Simplify Your Visa Journey",
     h2: "Start Your Application Now",
     buttonText: "Get Started",
-    buttonLink: "/start",
+    buttonLink: "/",
   },
   {
     image: ban3,
@@ -40,21 +40,23 @@ const slidesData = [
     image: ban4,
     h3: "Secure and Reliable Services",
     h2: "We Make It Easy",
-    buttonText: "Explore Options",
-    buttonLink: "/options",
+    buttonText: "Explore More",
+    buttonLink: "/allArtifacts",
   },
 ];
 
 const CenterText = ({ h3, h2, buttonText, buttonLink }) => (
-  <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-[#ffffff] px-5">
+  <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white px-5">
     <Fade direction="down">
       <h3 className="text-4xl font-bold mb-4">{h3}</h3>
     </Fade>
     <Fade direction="up">
-      <h2 className="text-3xl md:text-5xl font-extrabold mb-4">{h2}</h2>
-      <button className="px-10 py-3 bg-white text-black hover:bg-slate-300 text-xl text-bold">
-        <Link to={buttonLink}>{buttonText}</Link>
-      </button>
+      <h2 className="text-3xl md:text-5xl font-extrabold mb-6">{h2}</h2>
+      <Link to={buttonLink}>
+        <button className=" px-10 z-50 py-3 bg-white text-black hover:bg-slate-300 text-xl font-bold">
+          {buttonText}
+        </button>
+      </Link>
     </Fade>
   </div>
 );
@@ -100,7 +102,7 @@ const Banner = () => {
           </SwiperSlide>
         ))}
       </Swiper>
-      <div className="relative z-10 mb-20">
+      <div className="relative border z-10 mb-20">
         <Fade direction="up">
           <div className="-mt-28  ">
             <BannerHelper />
