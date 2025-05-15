@@ -17,7 +17,7 @@ const GetTicket = () => {
   //   const handleSubmit = async (e) => {
   //     e.preventDefault();
   //     try {
-  //       await axios.post("http://localhost:5000/api/tickets", formData);
+  //       await axios.post("https://timekeeper-s-archive-server.vercel.app/api/tickets", formData);
   //       alert("Ticket booked successfully!");
   //       setFormData({
   //         name: "",

@@ -52,8 +52,10 @@ const CenterText = ({ h3, h2, buttonText, buttonLink }) => (
     </Fade>
     <Fade direction="up">
       <h2 className="text-3xl md:text-5xl font-extrabold mb-6">{h2}</h2>
+    </Fade>
+    <Fade direction="up" delay={200}>
       <Link to={buttonLink}>
-        <button className=" px-10 z-50 py-3 bg-white text-black hover:bg-slate-300 text-xl font-bold">
+        <button className="px-10 z-50 py-3 bg-white text-black hover:bg-slate-300 text-xl font-bold">
           {buttonText}
         </button>
       </Link>
@@ -76,7 +78,7 @@ const Banner = () => {
         }}
         navigation={true}
         modules={[Autoplay, Pagination, Navigation]}
-        className="mySwiper opacity-95"
+        className="mySwiper"
       >
         {slidesData.map((slide, index) => (
           <SwiperSlide key={index}>
@@ -89,9 +91,9 @@ const Banner = () => {
               }}
             >
               {/* Glass Overlay */}
-              <div className="absolute z-10 inset-0 bg-black bg-opacity-20 backdrop-blur-0"></div>
+              <div className="absolute inset-0 bg-black bg-opacity-20 backdrop-blur-0"></div>
 
-              {/* Center Text */}
+              {/* Center Text with Button */}
               <CenterText
                 h3={slide.h3}
                 h2={slide.h2}

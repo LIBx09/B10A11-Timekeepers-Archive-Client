@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { AllArtifactsCard } from "./AllArtifactsCard";
 import { Fade } from "react-awesome-reveal";
 import { FaSortAlphaDown, FaSortAlphaUp, FaSpinner } from "react-icons/fa";
-import bg from "../../assets/img/allbg.png";
+import bg from "../../assets/img/ArtBg1.jpg";
 
 const AllArtifacts = () => {
   const allData = useLoaderData();
